@@ -1,4 +1,4 @@
-const API_KEY = "AIzaSyAXhB3J1E085qOtXlq7rjeeCilldyr90nc";
+const API_KEY = "youtube-v3-api-key"; // Replace with your own YouTube API key
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("search");
 const resultsDiv = document.getElementById("results");
