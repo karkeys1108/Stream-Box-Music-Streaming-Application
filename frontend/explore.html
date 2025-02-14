@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stream Box || Library</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: url('images/music.webp') no-repeat center center/cover;
+            background-attachment: fixed;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-200 antialiased">
+    <nav class="relative bg-black/60 backdrop-blur-md py-5 px-10 flex justify-between items-center shadow-lg fixed top-0 left-0 w-full z-50">
+        <h1 class="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-orange-500">🎵 Stream Box</h1>
+        <div class="space-x-8 text-lg">
+            <a href="index.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Home</a>
+            <a href="explore.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Explore</a>
+            <a href="library.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Library</a>
+            <a href="premium.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Premium</a>
+        </div>
+        <a href="signup.html" class="px-6 py-2 text-lg font-bold text-white bg-gradient-to-r from-pink-500 to-orange-500 rounded-lg shadow-lg">Sign Up</a>
+    </nav>
+
+    <div class="container mx-auto px-4 py-24 text-center">
+        <h1 class="text-5xl font-bold text-white drop-shadow-lg">Discover Your Favorite Music</h1>
+        <form id="search-form" class="flex items-center mt-8 justify-center">
+            <input type="text" id="search" placeholder="Search for songs, artists, albums..." class="w-2/3 px-6 py-4 rounded-md glass text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-pink-500" required/>
+            <button type="submit" class="ml-3 px-6 py-4 text-lg font-bold text-white bg-gradient-to-r from-pink-500 to-orange-500 rounded-md shadow-lg hover:from-pink-600 hover:to-orange-600 transition-all">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+
+        <div id="results" class="mt-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+            <!-- Music videos will be displayed here -->
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Stream</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: url('images/music.webp') no-repeat center center/cover;
+            background-attachment: fixed; /* Keeps the background steady */
+        }
+
+        /* Premium Gradient Effect */
+        .premium-btn {
+            background: linear-gradient(135deg, #ff3f6c, #ff884d);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 63, 108, 0.6);
+        }
+        .premium-btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: skewX(-30deg);
+            transition: all 0.5s ease-in-out;
+        }
+        .premium-btn:hover::before {
+            left: 100%;
+        }
+        .premium-btn:hover {
+            box-shadow: 0 0 20px rgba(255, 63, 108, 0.8);
+        }
+
+        /* Navbar Logo Effect */
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff3f6c, #ff884d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease-in-out;
+            position: relative;
+        }
+        .logo:hover {
+            text-shadow: 0 0 10px rgba(255, 63, 108, 0.8);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="bg-black text-white relative">
+
+    <!-- Dark Overlay for Better Contrast -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <!-- Navbar -->
+    <nav class="relative bg-[#181818]/80 backdrop-blur-md py-5 px-10 flex justify-between items-center shadow-lg fixed top-0 left-0 w-full z-50">
+        <h1 class="logo">🎵 Stream Box</h1>
+        <div class="space-x-8 text-lg">
+            <a href="index.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Home</a>
+            <a href="explore.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Explore</a>
+            <a href="library.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Library</a>
+            <a href="premium.html" class="text-gray-400 font-medium hover:text-white transition duration-300">Premium</a>
+        </div>
+        <a href="signup.html" class="px-6 py-2 text-lg font-bold text-white premium-btn rounded-lg shadow-lg">
+            Sign Up
+        </a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen flex flex-col items-center justify-center text-center px-6">
+        <div class="relative z-10 max-w-3xl">
+            <h2 class="text-6xl font-extrabold text-white drop-shadow-md leading-tight tracking-wide">
+                Elevate Your <span class="text-[#ff3f6c]">Music Experience</span>
+            </h2>
+            <p class="text-xl text-gray-300 mt-5 tracking-wide leading-relaxed">
+                Discover, stream, and vibe to the best tunes. Immerse yourself in music like never before.
+            </p>
+
+            <!-- Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row items-center justify-center text-center gap-6">
+                <!-- Start Listening Button with Premium Effect -->
+                <a href="explore.html" class="px-8 py-3 text-lg font-semibold text-white premium-btn rounded-full shadow-lg flex items-center gap-3">
+                    Start Listening <i class="fas fa-music animate-bounce"></i>
+                </a>
+
+                <!-- Premium Sign Up Button -->
+                <a href="signup.html" class="px-8 py-3 text-lg font-semibold text-white premium-btn rounded-full shadow-lg">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
